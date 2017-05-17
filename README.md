@@ -6,4 +6,4 @@ Batch script to turn .csv files extracted from hangouts into intelligible lines,
 
 2: Rename the zip folder to hangouts-export
 
-3: Run the batch file. If all goes well, the filtered text should appear in the file output.log.
+3: Run the batch file in the same folder that countains the zip hangouts-export.zip. If all goes well, the filtered text should appear in the file output.log.
