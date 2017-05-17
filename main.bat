@@ -3,7 +3,8 @@ setlocal enableextensions
 cd /d %~dp0
 Call :UnZipFile "%~dp0" "%~dp0hangouts-export.zip"
 break > output.log
-for %%f in (*.csv) do findstr /r /c:"Andrew Clark" /c:"^ORA-[0-9]*" "%%f" >> output.log
+set "name=John Smith"
+for %%f in (*.csv) do findstr /r /c:"%name%" /c:"^ORA-[0-9]*" "%%f" >> output.log
 set "format=hangouts-conversation-"
 for /r %%a in (*.csv) do for /f "delims=" %%i in ('echo("%%~na" ^| findstr /i "%format%"') do del "%%~fa"
 exit /b
